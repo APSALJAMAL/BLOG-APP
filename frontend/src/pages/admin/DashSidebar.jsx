@@ -50,15 +50,16 @@ export default function DashSidebar({ onTabClick }) {
   };
 
   return (
-    <Sidebar className='w-full md:w-56'>
+    <Sidebar className='w-full md:w-56 shadow-gray-800 shadow-lg dark:shadow-purple-500 dark:shadow-lg'>
       <Sidebar.Items>
-        <Sidebar.ItemGroup className='flex flex-col gap-1'>
+        <Sidebar.ItemGroup className='flex flex-col gap-1 '>
           {currentUser && currentUser.isAdmin && (
             <Link to='/dashboard?tab=dash' onClick={() => handleTabClick('dash')}>
               <Sidebar.Item
                 active={tab === 'dash' || !tab}
                 icon={HiChartPie}
                 as='div'
+                className='shadow-gray-800 shadow-lg dark:shadow-purple-500 dark:shadow-lg'
               >
                 Dashboard
               </Sidebar.Item>
@@ -71,6 +72,7 @@ export default function DashSidebar({ onTabClick }) {
               label={currentUser.isAdmin ? 'Admin' : 'User'}
               labelColor='dark'
               as='div'
+              className='shadow-gray-800 shadow-lg dark:shadow-purple-500 dark:shadow-lg'
             >
               Profile
             </Sidebar.Item>
@@ -81,6 +83,7 @@ export default function DashSidebar({ onTabClick }) {
                 active={tab === 'posts'}
                 icon={HiDocumentText}
                 as='div'
+                className='shadow-gray-800 shadow-lg dark:shadow-purple-500 dark:shadow-lg'
               >
                 Posts
               </Sidebar.Item>
@@ -93,6 +96,7 @@ export default function DashSidebar({ onTabClick }) {
                   active={tab === 'users'}
                   icon={HiOutlineUserGroup}
                   as='div'
+                  className='shadow-gray-800 shadow-lg dark:shadow-purple-500 dark:shadow-lg'
                 >
                   Users
                 </Sidebar.Item>
@@ -102,6 +106,7 @@ export default function DashSidebar({ onTabClick }) {
                   active={tab === 'comments'}
                   icon={HiAnnotation}
                   as='div'
+                  className='shadow-gray-800 shadow-lg dark:shadow-purple-500 dark:shadow-lg'
                 >
                   Comments
                 </Sidebar.Item>
@@ -114,6 +119,7 @@ export default function DashSidebar({ onTabClick }) {
                 active={tab === 'transactions'}
                 icon={HiDocumentText}
                 as='div'
+                className='shadow-gray-800 shadow-lg dark:shadow-purple-500 dark:shadow-lg'
               >
                 Transactions
               </Sidebar.Item>
@@ -121,8 +127,8 @@ export default function DashSidebar({ onTabClick }) {
           )}
           <Sidebar.Item
             icon={HiArrowSmRight}
-            className='cursor-pointer'
             onClick={handleSignout}
+            className='cursor-pointer shadow-gray-800 shadow-lg dark:shadow-purple-500 dark:shadow-lg'
           >
             Sign Out
           </Sidebar.Item>

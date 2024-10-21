@@ -1,9 +1,8 @@
 .env
 node modules
 aj.txt
-firebase.json.txt
-firebaseAdmin.js.txt
-backebd/.env
+
+.env
 
 # Logs
 logs
